@@ -1,2 +1,2 @@
-# M-I-D-A-R-I
+# midari
 my configuration files
