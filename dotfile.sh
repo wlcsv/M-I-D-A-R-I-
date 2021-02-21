@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+## Váriaveis ##
+URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+
+DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
+
 PROGRAMAS_PARA_INSTALAR=(
     snapd
     node 
@@ -7,6 +12,8 @@ PROGRAMAS_PARA_INSTALAR=(
 )
 
 ## Removendo travas eventuais do apt ##
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/cache/apt/archives/lock
 sudo rm /etc/apt/preferences.d/nosnap.pref
 
 ## Atualizando o repositório ##
@@ -24,8 +31,14 @@ done
 ## Atualizando o repositório depois da adição de novos repositórios ##
 sudo apt update -y
 
-## Instalando snaps ##
+## Download e instalaçao de programas externos ##
+mkdir "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 
+## Instalando pacotes .deb baixados na sessão anterior ##
+sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+
+## Instalando snaps ##
 echo "Instalando VS Code"
 sudo snap install code --classic 
 
@@ -36,10 +49,12 @@ echo "Instalando QBittorrent"
 sudo snap install qbittorrent-arnatious 
 
 ## Terminal ##
-
 echo "Instalando o zsh"
 sudo apt install zsh -y
 
+curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
+
 sudo usermod --shell $(which zsh) $USER
 
-echo "Fim"
+## Fim ##
+echo "Fim da instalação"
