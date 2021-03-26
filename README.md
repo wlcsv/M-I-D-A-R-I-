@@ -1,2 +1,2 @@
-# midari
+# my-dotfiles
 my configuration files
