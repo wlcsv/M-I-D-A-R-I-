@@ -12,8 +12,6 @@ DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 PROGRAMAS_PARA_INSTALAR=(
     snapd
     git
-    # npm
-    # node
     zsh
 )
 
