@@ -1,5 +1,5 @@
 " Autor: wallacy 
-" Código: nhe
+" Código: https://github.com/wlcsv/my-dotfiles.git
 
 " BUNDLE
 " Automatically download vim-plug if it doesn't exist
