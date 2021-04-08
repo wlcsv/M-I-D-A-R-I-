@@ -10,10 +10,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-    
-    " Plug 'vim-scripts/AutoComplPop'
+   
+    Plug 'preservim/nerdtree'
+    Plug 'vim-scripts/AutoComplPop'
     Plug 'Raimondi/delimitMate'
-    Plug 'codota/tabnine-vim'
     Plug 'crusoexia/vim-dracula'
     Plug 'sheerun/vim-polyglot'
 
