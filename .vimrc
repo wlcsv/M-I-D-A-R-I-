@@ -23,6 +23,8 @@ set background=dark
 
 set hidden
 
+set incsearch
+
 set number
 set relativenumber
 
@@ -31,9 +33,13 @@ set ve=all
 
 set inccommand=split
 
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set bs=2
+
 " Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
     let col = col('.') - 1
@@ -47,6 +53,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
 let mapleader="\<space>"
+
 nnoremap <leader>; A;<esc>
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
