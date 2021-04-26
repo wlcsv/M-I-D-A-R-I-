@@ -31,8 +31,6 @@ set relativenumber
 set mouse=a
 set ve=all
 
-set inccommand=split
-
 set expandtab
 set shiftwidth=4
 set softtabstop=4

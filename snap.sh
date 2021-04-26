@@ -3,7 +3,7 @@
 ## Instalação de pacotes Snap ##
 echo "Instalando pacotes Snap"
  
-sudo snap install nvim --classic
+# sudo snap install nvim --classic
 sudo snap install spotify
 
 # sudo snap install qbittorrent-arnatious
