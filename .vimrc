@@ -28,6 +28,8 @@ set incsearch
 set number
 set relativenumber
 
+set nowrap
+
 set mouse=a
 set ve=all
 
