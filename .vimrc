@@ -23,6 +23,7 @@ set background=dark
 
 set hidden
 
+set hlsearch
 set incsearch
 
 set number
